@@ -1,41 +1,39 @@
-import React, { useState } from 'react';
-
-import { MenuIcon, XIcon } from '@heroicons/react/solid';
-import Link from '../Link/Link';
-import './NavBar.css'
-import { NavLink } from 'react-router-dom';
-
-
-const NavBar = (props) => {
-    const [open, setOpen] = useState(false);
-
-    const routes = [{ name: 'HOME', id: 0, link: '/home' && <NavLink></NavLink> },
-    { name: 'MY PROJECTS', id: 1, link: '/myProjects' },
-    { name: 'CONTACT', id: 4, link: '/contact' },
-    { name: 'ABOUT', id: 3, link: '/About' }]
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 
+
+
+const NavBar = () => {
+
+    const menuItems = <>
+        <li><Link id='#myProjects' to='/myProjects'>MY PROJECTS</Link></li>
+        <li><Link to='/contact'>CONTACT</Link></li>
+        <li><Link to='/about'>ABOUT</Link></li>
+
+    </>
     return (
-
-
-        <nav className='text-white font-bold'>
-            <div onClick={() => setOpen(!open)} className='w-6 h-6 md:hidden'>
-                {
-                    open ? <XIcon></XIcon> : <MenuIcon></MenuIcon>
-                }
+        <div>
+            <div className="navbar text-white font-bold px-12">
+                <div className="navbar-start">
+                    <div className="dropdown">
+                        <label tabIndex="0" className="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                        </label>
+                        <ul tabIndex="0" className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                            {menuItems}
+                        </ul>
+                    </div>
+                    <a className="text-xl">Home</a>
+                </div>
+                <div className="navbar-center hidden lg:flex">
+                    <ul className="menu menu-horizontal p-0">
+                        {menuItems}
+                    </ul>
+                </div>
             </div>
-
-            <ul className={`md:flex justify-center md:static w-full absolute duration-500 ease-in  ${open ? 'top-6' : 'top-[-134px]'}`}>
-                {
-                    routes.map(route =>
-                        <Link
-                            key={route.id}
-                            route={route}>
-                        </Link>)
-                }
-            </ul>
-        </nav >
+        </div>
     );
 };
 
