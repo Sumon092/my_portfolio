@@ -1,0 +1,9 @@
+/* background-color: #282C34; */
+.home {
+    background-image: url('../../Assets/backgroundImage/bg1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, .7);
+    background-blend-mode: overlay;
+    height: calc(100vh-80px);
+}
