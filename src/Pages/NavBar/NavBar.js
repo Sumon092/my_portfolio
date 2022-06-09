@@ -16,9 +16,8 @@ const NavBar = () => {
         }
     }
     window.addEventListener('scroll', changeBackground);
+
     return (
-
-
         <div className={navBar ? 'navBar active z-50' : 'navBar z-50 mt-[-80px]'}>
             <div className="text-start">
                 <div className="dropdown">
@@ -40,7 +39,7 @@ const NavBar = () => {
             <div className="navbar-end hidden lg:flex">
                 <ul className="menu menu-horizontal p-0 font-bold">
                     <li>
-                        <NavLink to='/home' className={({ isActive }) => isActive ? 'text-warning border-4 border-solid' : 'white'}>HOME</NavLink>
+                        <NavLink to='/home' className={({ isActive }) => isActive ? 'text-warning' : 'white'}>HOME</NavLink>
                     </li>
                     <li>
                         <NavLink to='/myProjects' className={({ isActive }) => isActive ? 'text-warning' : 'white'}>MY PROJECTS</NavLink>

@@ -5,5 +5,45 @@
     background-size: cover;
     background-color: rgba(0, 0, 0, .7);
     background-blend-mode: overlay;
-    height: calc(100vh - 0px);
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin-top: 24px;
+    gap: 20px;
+}
+
+@keyframes react-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.aboutContainer {
+    /* margin-top: -50px; */
+    position: relative;
+}
+
+.pro-image {
+    width: full;
+    border-radius: 50%;
+
+}
+
+.aboutImage {
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    position: absolute;
+    top: 0;
+    margin-top: 20px;
+    margin-left: 530px;
+    margin-right: auto;
+    /* margin: auto; */
 }

@@ -1,18 +1,17 @@
 import React from 'react';
 import './Home.css'
-import backgroundImage from '../../Assets/backgroundImage/bg1.jpg'
-import NavBar from '../NavBar/NavBar';
 import Banner from './Banner/Banner';
 import MyProjects from '../Projects/MyProjects/MyProjects';
+import Skill from './Skill';
+import About from './About';
 
 const Home = () => {
     return (
         <>
-            <div className='home'>
-                {/* <NavBar></NavBar> */}
-                <Banner></Banner>
-                <MyProjects />
-            </div>
+            <Banner></Banner>
+            <Skill></Skill>
+            <MyProjects />
+            <About></About>
         </>
 
     );
