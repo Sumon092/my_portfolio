@@ -8,7 +8,7 @@ import MyProjects from '../Projects/MyProjects/MyProjects';
 const Home = () => {
     return (
         <>
-            <div className='home h-screen lg:py-5'>
+            <div className='home'>
                 <NavBar></NavBar>
                 <Banner></Banner>
                 <MyProjects />
