@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* .blinking-cursor:after {
+  content: '|';
+  @apply text-secondary-300;
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+
+} */
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

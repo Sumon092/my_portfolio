@@ -1,0 +1,6 @@
+.navBar {
+    background-color: #3A4256;
+    margin-top: calc(100vh-80px);
+    height: 40px;
+    padding-top: 10px;
+}

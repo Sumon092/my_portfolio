@@ -2,25 +2,30 @@ import React, { useState } from 'react';
 
 import { MenuIcon, XIcon } from '@heroicons/react/solid';
 import Link from '../Link/Link';
+import './NavBar.css'
+import { NavLink } from 'react-router-dom';
 
 
 const NavBar = (props) => {
     const [open, setOpen] = useState(false);
 
-    const routes = [{ name: 'Home', id: 0, link: '/home' },
-    { name: 'Shop', id: 1, link: '/product' },
-    { name: 'Deals', id: 2, link: '/Deals' },
+    const routes = [{ name: 'HOME', id: 0, link: '/home' },
+    { name: 'MY PROJECTS', id: 1, link: '/myProjects' },
     { name: 'About', id: 3, link: '/About' },
     { name: 'Contact', id: 4, link: '/contact' }]
 
 
+
     return (
+
+
         <nav className='text-white font-bold'>
             <div onClick={() => setOpen(!open)} className='w-6 h-6 md:hidden'>
                 {
                     open ? <XIcon></XIcon> : <MenuIcon></MenuIcon>
                 }
             </div>
+
             <ul className={`md:flex justify-center md:static w-full absolute duration-500 ease-in  ${open ? 'top-6' : 'top-[-134px]'}`}>
                 {
                     routes.map(route =>
@@ -30,7 +35,7 @@ const NavBar = (props) => {
                         </Link>)
                 }
             </ul>
-        </nav>
+        </nav >
     );
 };
 
