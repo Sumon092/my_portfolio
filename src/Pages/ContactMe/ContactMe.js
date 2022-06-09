@@ -1,7 +1,10 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { toast } from 'react-toastify';
 import NavBar from '../NavBar/NavBar';
+import './Contact.css'
+
 
 const ContactMe = () => {
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
@@ -17,6 +20,10 @@ const ContactMe = () => {
             message: data.message
         }
         console.log(formInput);
+        alert('Message sent')
+        if (data.email === true) {
+            toast.success('Message sent successfully')
+        };
         reset()
 
         const postSubmission = async () => {
@@ -37,16 +44,16 @@ const ContactMe = () => {
 
 
     return (
-        <div className='bg-slate-400'>
+        <div className='contact lg:py-5'>
             <NavBar></NavBar>
             <div className='h-screen flex justify-center flex-col'>
-                <div className='w-1/3 m-auto p-8 shadow-lg'>
-                    <h1 className='text-4xl font-bold flex items-center'>
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 transform rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <div className='w-1/3 m-auto p-8 shadow-lg border-2 border-white'>
+                    <h1 className='text-4xl font-bold  flex items-center'>
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-white transform rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                             <path strokeLinecap="round" strokeLinejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                        </svg><span>Contact</span>
+                        </svg><span className='text-white'>Contact</span>
                     </h1>
-                    <form onSubmit={handleSubmit(submitForm)}>
+                    <form className='text-white' onSubmit={handleSubmit(submitForm)}>
                         <div className='my-2 flex flex-col' >
                             <label htmlFor="name">Name</label>
                             <input

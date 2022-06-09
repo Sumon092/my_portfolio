@@ -4,9 +4,8 @@ import './MyProjects.css'
 
 const MyProjects = () => {
     return (
-        <div className='myProjects lg:py-5'>
-            <NavBar></NavBar>
-            <h2 className="text-5xl mt-14">Those are My Projects</h2>
+        <div className='lg:py-5'>
+            <h2 className='text-5xl text-center text-neutral font-bold'>My projects</h2>
         </div>
     );
 };

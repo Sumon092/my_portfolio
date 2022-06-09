@@ -9,10 +9,10 @@ import { NavLink } from 'react-router-dom';
 const NavBar = (props) => {
     const [open, setOpen] = useState(false);
 
-    const routes = [{ name: 'HOME', id: 0, link: '/home' },
+    const routes = [{ name: 'HOME', id: 0, link: '/home' && <NavLink></NavLink> },
     { name: 'MY PROJECTS', id: 1, link: '/myProjects' },
-    { name: 'About', id: 3, link: '/About' },
-    { name: 'Contact', id: 4, link: '/contact' }]
+    { name: 'CONTACT', id: 4, link: '/contact' },
+    { name: 'ABOUT', id: 3, link: '/About' }]
 
 
 
