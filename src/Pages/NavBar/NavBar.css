@@ -1,6 +1,18 @@
 .navBar {
-    background-color: #3A4256;
-    margin-top: calc(100vh-80px);
-    height: 40px;
-    padding-top: 10px;
+    background-color: transparent;
+    color: white;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    margin-top: -60px;
+}
+
+.navBar.active {
+    background: linear-gradient(90deg, rgb(66, 2, 194)0%, rgb(0, 78, 194)100%);
+
 }

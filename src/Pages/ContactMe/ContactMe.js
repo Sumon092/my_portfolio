@@ -46,7 +46,7 @@ const ContactMe = () => {
     return (
         <div className='contact'>
 
-            <div className='h-screen flex justify-center flex-col'>
+            <div className='h-screen flex justify-center flex-col z-auto'>
                 {/* <NavBar></NavBar> */}
                 <div className='w-1/3 m-auto p-8 shadow-lg border-2 border-white'>
                     <h1 className='text-4xl font-bold  flex items-center'>
