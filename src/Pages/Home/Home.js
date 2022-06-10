@@ -9,7 +9,7 @@ const Home = () => {
     return (
         <>
             <div className='home'>
-                <NavBar></NavBar>
+                {/* <NavBar></NavBar> */}
                 <Banner></Banner>
                 <MyProjects />
             </div>

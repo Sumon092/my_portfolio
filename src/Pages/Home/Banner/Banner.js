@@ -23,7 +23,7 @@ const Banner = () => {
     // }, [])
     return (
         <>
-            <div class="hero min-h-screen mb-0">
+            <div class="hero min-h-screen">
                 <div class="hero-content flex-col lg:flex-row-reverse">
                     <img src={BannerImage1} class="w-62 lg:max-w-lg rounded-lg shadow-2xl" alt='' />
 

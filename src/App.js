@@ -11,7 +11,8 @@ import MyProjects from './Pages/Projects/MyProjects/MyProjects';
 
 function App() {
   return (
-    <div >
+    <div>
+      <NavBar></NavBar>
       <Routes>
         <Route path='/' element={<Home />}></Route>
         <Route path='/home' element={<Home />}></Route>
